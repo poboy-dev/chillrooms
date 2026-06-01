@@ -3,6 +3,7 @@
   "framework": null,
   "buildCommand": "vite build",
   "installCommand": "npm install",
+  "outputDirectory": "dist",
   "routes": [
     {
       "src": "/.*",
