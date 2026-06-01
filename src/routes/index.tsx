@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
+import logoAsset from "@/assets/bailtranquille-logo.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -88,8 +89,15 @@ function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-5 lg:px-8 h-16 flex items-center justify-between">
-        <a href="#" className="text-xl font-bold tracking-tight" style={{ color: "var(--navy)" }}>
-          BailTranquille<span style={{ color: "var(--gold)" }}>·</span>
+        <a href="#" className="flex items-center gap-2.5">
+          <img
+            src={logoAsset.url}
+            alt="BailTranquille logo"
+            className="w-10 h-10 rounded-full object-cover ring-1 ring-border"
+          />
+          <span className="text-xl font-bold tracking-tight" style={{ color: "var(--navy)" }}>
+            BailTranquille<span style={{ color: "var(--gold)" }}>·</span>
+          </span>
         </a>
         <nav className="hidden md:flex items-center gap-8">
           {links.map((l) => (
@@ -666,9 +674,16 @@ function Footer() {
     <footer className="text-white/80 pt-16 pb-8" style={{ background: "var(--navy-deep)" }}>
       <div className="max-w-7xl mx-auto px-5 lg:px-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
-          <p className="text-xl font-bold text-white">
-            BailTranquille<span style={{ color: "var(--gold)" }}>·</span>
-          </p>
+          <div className="flex items-center gap-3">
+            <img
+              src={logoAsset.url}
+              alt="BailTranquille logo"
+              className="w-11 h-11 rounded-full object-cover ring-1 ring-white/20"
+            />
+            <p className="text-xl font-bold text-white">
+              BailTranquille<span style={{ color: "var(--gold)" }}>·</span>
+            </p>
+          </div>
           <p className="mt-4 text-sm text-white/65 leading-relaxed">
             La gestion locative centralisée, sécurisée et accessible à tous.
           </p>
