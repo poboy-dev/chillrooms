@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import faviconAsset from "@/assets/favicon-bailtranquille.png.asset.json";
 
 function NotFoundComponent() {
   return (
