@@ -62,26 +62,41 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --radius: 0.75rem;
+  /* BailTranquille palette */
+  --navy: #1E1B5E;
+  --navy-deep: #0F0D2E;
+  --gold: #FFCC00;
+  --ink: #1A1A2E;
+  --bg-soft: #F8F8FF;
+  --bg-gray: #F0F0F8;
+
+  --background: #FFFFFF;
+  --foreground: #1A1A2E;
+  --card: #FFFFFF;
+  --card-foreground: #1A1A2E;
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1A2E;
+  --primary: #1E1B5E;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F0F0F8;
+  --secondary-foreground: #1E1B5E;
+  --muted: #F8F8FF;
+  --muted-foreground: #5b5b75;
+  --accent: #FFCC00;
+  --accent-foreground: #1E1B5E;
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --destructive-foreground: #FFFFFF;
+  --border: #E5E5F0;
+  --input: #E5E5F0;
+  --ring: #1E1B5E;
+
+  --gradient-hero: linear-gradient(135deg, #1E1B5E 0%, #0F0D2E 100%);
+  --gradient-gold: linear-gradient(135deg, #FFCC00 0%, #FFD84D 100%);
+  --shadow-card: 0 4px 20px -8px rgba(30, 27, 94, 0.15);
+  --shadow-card-hover: 0 12px 32px -10px rgba(30, 27, 94, 0.25);
+  --shadow-gold: 0 8px 24px -8px rgba(255, 204, 0, 0.5);
+
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -140,5 +155,82 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .bt-gradient-hero { background: var(--gradient-hero); }
+  .bt-gradient-gold { background: var(--gradient-gold); }
+  .bt-shadow-card { box-shadow: var(--shadow-card); }
+  .bt-shadow-card-hover { box-shadow: var(--shadow-card-hover); }
+  .bt-shadow-gold { box-shadow: var(--shadow-gold); }
+
+  .bt-fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+  .bt-fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .bt-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow-card);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+  .bt-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card-hover);
+    border-color: var(--gold);
+  }
+
+  .bt-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: var(--gold);
+    color: var(--navy);
+    font-weight: 600;
+    padding: 0.875rem 1.5rem;
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .bt-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-gold);
+  }
+
+  .bt-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: 1.5px solid #FFFFFF;
+    color: #FFFFFF;
+    font-weight: 600;
+    padding: 0.875rem 1.5rem;
+    border-radius: 12px;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  .bt-btn-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
   }
 }
