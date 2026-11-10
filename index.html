@@ -3,15 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="apple-touch-icon" href="/favicon.png" />
+    
+    <!-- Title & SEO Meta Tags -->
     <title>Chill Rooms — Vos loyers, locataires et reçus dans votre téléphone</title>
-    <meta name="description" content="Application Android pour propriétaires au Cameroun : suivi des loyers, relances WhatsApp et reçus, même sans internet." />
-    <meta name="author" content="BailTranquille" />
-    <meta property="og:title" content="Chill Rooms — Vos loyers, locataires et reçus dans votre téléphone" />
-    <meta property="og:description" content="Application Android pour propriétaires au Cameroun : suivi des loyers, relances WhatsApp et reçus, même sans internet." />
+    <meta name="description" content="Application Android pour propriétaires et bailleurs au Cameroun : suivi des loyers, relances WhatsApp et reçus numérotés, 100% fonctionnelle même sans connexion internet." />
+    <meta name="keywords" content="Chill Rooms, gestion locative Cameroun, application loyers Douala, suivi locataires hors ligne, reçus de loyer, bailleur Cameroun, gestion immobilière Android" />
+    <meta name="author" content="Chill Rooms" />
+    <meta name="application-name" content="Chill Rooms" />
+    <meta name="theme-color" content="#08215A" />
+    <meta name="msapplication-TileColor" content="#08215A" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Chill Rooms" />
+
+    <!-- Crawlers & Robots -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large" />
+
+    <!-- Favicons & App Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn, Telegram) -->
     <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:site_name" content="Chill Rooms" />
+    <meta property="og:title" content="Chill Rooms — Vos loyers, locataires et reçus dans votre téléphone" />
+    <meta property="og:description" content="Application Android pour propriétaires au Cameroun : suivi des loyers, relances WhatsApp et reçus numérotés, même sans connexion internet." />
+    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:image:secure_url" content="/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Chill Rooms - Application Android de gestion locative hors-ligne" />
+    <meta property="og:locale" content="fr_FR" />
+
+    <!-- Twitter / X Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@chillrooms" />
+    <meta name="twitter:creator" content="@chillrooms" />
+    <meta name="twitter:title" content="Chill Rooms — Vos loyers, locataires et reçus dans votre téléphone" />
+    <meta name="twitter:description" content="Application Android pour propriétaires au Cameroun : suivi des loyers, relances WhatsApp et reçus, même sans internet." />
+    <meta name="twitter:image" content="/twitter-image.png" />
+    <meta name="twitter:image:alt" content="Chill Rooms — Application Android pour propriétaires" />
+
+    <!-- JSON-LD Structured Data for Crawlers & Google Rich Snippets -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "SoftwareApplication",
+            "name": "Chill Rooms",
+            "operatingSystem": "Android 8.0+",
+            "applicationCategory": "BusinessApplication",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "XAF",
+              "description": "Essai gratuit 30 jours, puis forfaits dès 3 000 FCFA/mois"
+            },
+            "description": "Application Android pour propriétaires et bailleurs au Cameroun : suivi des loyers, relances WhatsApp, reçus hors-ligne.",
+            "image": "/og-image.png",
+            "screenshot": "/og-image.png"
+          },
+          {
+            "@type": "Organization",
+            "name": "Chill Rooms",
+            "url": "https://chillrooms.com",
+            "logo": "/logo-square.png",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+237678887492",
+              "contactType": "customer service",
+              "availableLanguage": ["French"]
+            }
+          }
+        ]
+      }
+    </script>
+
+    <!-- Google Fonts Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" />

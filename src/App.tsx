@@ -40,9 +40,16 @@ const Eyebrow = ({ children, light }: { children: ReactNode; light?: boolean }) 
 );
 
 const Logo = ({ light }: { light?: boolean }) => (
-  <a href="#top" className={`leading-none ${light ? "text-primary-foreground" : "text-ink"}`}>
-    <span className="block font-[Space_Grotesk] text-2xl font-bold tracking-tight">chill</span>
-    <span className="block text-[10px] font-bold uppercase tracking-[0.3em]">rooms</span>
+  <a href="#top" className="flex items-center gap-2.5 group">
+    <img
+      src="/logo-square.png"
+      alt="Chill Rooms"
+      className="h-9 w-9 rounded-xl object-cover shadow-sm ring-1 ring-border/20 transition-transform group-hover:scale-105"
+    />
+    <span className={`leading-none ${light ? "text-primary-foreground" : "text-ink"}`}>
+      <span className="block font-[Space_Grotesk] text-2xl font-bold tracking-tight">chill</span>
+      <span className="block text-[10px] font-bold uppercase tracking-[0.3em]">rooms</span>
+    </span>
   </a>
 );
 
@@ -79,6 +86,13 @@ function PhoneMock() {
     <div className="relative mx-auto w-[270px]">
       <p className="absolute -top-6 right-0 text-[10px] text-primary-foreground/60">Données d'exemple</p>
       <div className="rounded-[2.2rem] border-[6px] border-ink bg-background p-3 shadow-2xl">
+        <div className="mb-2 flex items-center justify-between border-b border-border/60 pb-1.5">
+          <div className="flex items-center gap-1.5">
+            <img src="/logo-square.png" alt="Chill Rooms" className="h-4 w-4 rounded-md object-cover" />
+            <span className="text-[10px] font-bold tracking-tight text-ink">Chill Rooms</span>
+          </div>
+          <span className="rounded bg-mint-soft px-1.5 py-0.5 text-[8px] font-semibold text-forest">Hors-ligne</span>
+        </div>
         <div className="rounded-md bg-alert py-1 text-center text-[9px] font-bold text-primary-foreground">MODE TEST · J-23 RESTANTS</div>
         <p className="mt-2 text-sm font-bold text-ink">Bonsoir Madame Nkeng</p>
         <p className="text-[10px] text-muted-foreground">Douala · Bonamoussadi</p>
@@ -280,8 +294,17 @@ function Obtenir() {
     <section id="obtenir" className="bg-ink py-20 text-primary-foreground">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 lg:grid-cols-2 lg:items-center">
         <Reveal>
-          <Eyebrow light>Obtenir l'application</Eyebrow>
-          <h2 className="mt-3 text-4xl">Chill Rooms arrive sur votre téléphone</h2>
+          <div className="mb-4 flex items-center gap-3.5">
+            <img
+              src="/logo-square.png"
+              alt="Chill Rooms Application Android"
+              className="h-14 w-14 rounded-2xl shadow-lg ring-2 ring-primary-foreground/20"
+            />
+            <div>
+              <Eyebrow light>Obtenir l'application</Eyebrow>
+              <h2 className="mt-1 text-3xl font-bold sm:text-4xl">Chill Rooms arrive sur votre téléphone</h2>
+            </div>
+          </div>
           <p className="mt-4 text-primary-foreground/80">Téléchargez le fichier d'installation directement ici. En cas de souci, écrivez-nous sur WhatsApp.</p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a href={APK_URL} download className="inline-flex items-center gap-2 rounded-full bg-mint px-6 py-3 font-semibold text-ink"><Download size={18} /> Télécharger l'APK</a>
