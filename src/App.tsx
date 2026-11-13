@@ -5,7 +5,7 @@ import {
 } from "lucide-react";
 
 /* ---------- Constantes ---------- */
-const APK_URL = "/chillrooms.apk";
+const APK_URL = "https://github.com/poboy-dev/chillrooms/releases/download/mobile-app/base.apk";
 const WA_NUMBER = "237678887492";
 const WA_DISPLAY = "+237 678 88 74 92";
 const waLink = (msg = "Bonjour Chill Rooms, j'ai une question.") =>
